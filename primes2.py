@@ -2,7 +2,7 @@
 import time
 
 def main(): 
-    maxRange = 1000000#int(raw_input("What is the max range of numbers you want tested for being prime? ")) 
+    maxRange = int(raw_input("What is the max range of numbers you want tested for being prime? ")) 
     
     if maxRange % 2 == 0: #To avoid even number decrements
         maxRange -= 1
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     
     main()
     
-    print("--- %s seconds ---" % (time.time() - start_time))
+    print("Time taken: %s seconds" % (time.time() - start_time))
     raw_input()
 
                 
