@@ -1,4 +1,4 @@
-#This program was a result of my first idea of finding primes 
+#This program was a result of my second idea of finding primes 
 import time
 
 def main(): 
