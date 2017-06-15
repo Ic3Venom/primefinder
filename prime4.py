@@ -1,17 +1,19 @@
-#This program was a result of my second idea of finding primes 
+#This program was a result of my first idea of finding primes 
 import time
 
 def main(): 
     maxRange = int(raw_input("What is the max range of numbers you want tested for being prime? "))
+
+    if maxRange % 2 == 0: #To avoid even number decrements
+        maxRange -= 1
     
     with open('primelist.bin', 'wb+') as file:
-
-        if maxRange % 2 == 0: #To avoid even number decrements
-            maxRange -= 1
+        file.write('2 ')
     
         for guess in xrange(3, maxRange +1, 2):
-            file.write('2 ')
-    
+            #something
+            pass
+            
         file.seek(0)
         num = 0
         for line in file:
