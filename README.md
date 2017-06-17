@@ -9,3 +9,4 @@ Speed of each algorithm (for finding all primes from 1 to 100,000):
 * 'prime1.py': 45.5490000248 seconds
 * 'prime2.py': 12.3789999485 seconds
 * 'prime3.py': 2.39300012589 seconds
+* 'prime4.py': 40.9900000095 seconds
