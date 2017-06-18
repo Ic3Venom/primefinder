@@ -2,7 +2,7 @@
 import time
 
 def main(): 
-    maxRange = 100000#int(raw_input("What is the max range of numbers you want tested for being prime? ")) 
+    maxRange = int(raw_input("What is the max range of numbers you want tested for being prime? ")) 
     numRange= range(3, maxRange +1, 2) #currently has composites, they will be removed @end of program 
     primes = [2]
     
@@ -27,3 +27,4 @@ if __name__ == '__main__':
     
     print("Time taken: %s seconds" % (time.time() - start_time))
     raw_input()
+    
