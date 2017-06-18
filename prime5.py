@@ -2,7 +2,7 @@
 import time
 
 def main(): 
-    maxRange = 100#int(raw_input("What is the max range of numbers you want tested for being prime? ")) 
+    maxRange = int(raw_input("What is the max range of numbers you want tested for being prime? ")) 
     primes = [2]
     
     if maxRange % 2 == 0: #To avoid even number decrements
@@ -10,18 +10,22 @@ def main():
 
     for i in xrange(3, maxRange +1, 2):
         for j in primes:
-            if j >= i/2 +1:
-                break
-            
             if i % j == 0:
                 break
+            
+            if j > i/2:
+                primes.append(int(i))
+                break
+            
         else:
+            print 'pogChamp'
             primes.append(int(i))
         
     print 'Total primes: %d' % len(primes)
 
 if __name__ == '__main__':
     start_time = time.time()
+    print 'Prime5'
     
     main()
     
