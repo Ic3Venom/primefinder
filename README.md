@@ -6,7 +6,8 @@ I have devised of 2 different algorithms to find prime numbers.
 * 'prime3.py' contains the best algorithm I thought of without opening and reading files (fastest)
 
 Speed of each algorithm (for finding all primes from 1 to 100,000):
-* 'prime1.py': 45.5490000248 seconds
-* 'prime2.py': 12.3789999485 seconds
-* 'prime3.py': 2.39300012589 seconds
-* 'prime4.py': 40.9900000095 seconds
+* 'Prime1.py': 50.0920000076 seconds
+* 'Prime2.py': 14.3220000267 seconds
+* 'Prime3.py': 2.84400010109 seconds
+* 'Prime4.py': 27.7479999065 seconds
+* 'Prime5.py': 2.56399989128 seconds
