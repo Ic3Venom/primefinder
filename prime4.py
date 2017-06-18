@@ -7,14 +7,16 @@ def main():
     if maxRange % 2 == 0: #To avoid even number decrements
         maxRange -= 1
     
-    with open('primelist.bin', 'wb+') as file:
+    with open('primelist4.bin', 'wb+') as file:
         file.write('2')
     
         for guess in xrange(3, maxRange +1, 2):            
             file.seek(0)
+            
             for lines in file:
                 if guess % int(lines) is 0:
                     break
+                
             else:
                 file.write('\n' + bytes(guess))
             
@@ -28,6 +30,7 @@ def main():
         
 if __name__ == '__main__':
     start_time = time.time()
+    print 'Prime4'
     
     main()
     
