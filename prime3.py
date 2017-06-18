@@ -1,4 +1,4 @@
-#This program was a result of my second idea of finding primes 
+#This program was a result of my first idea of finding primes 
 import time
 
 def main(): 
@@ -12,6 +12,7 @@ def main():
         for j in primes:
             if i % j == 0:
                 break
+            
         else:
             primes.append(int(i))
         
@@ -19,10 +20,10 @@ def main():
 
 if __name__ == '__main__':
     start_time = time.time()
+    print 'Prime3'
     
     main()
     
     print("Time taken: %s seconds" % (time.time() - start_time))
     raw_input()
-
-                
+    
