@@ -16,10 +16,6 @@ def main():
             if j > i/2:
                 primes.append(int(i))
                 break
-            
-        else:
-            print 'pogChamp'
-            primes.append(int(i))
         
     print 'Total primes: %d' % len(primes)
 
