@@ -13,7 +13,7 @@ def main():
             if i % j == 0:
                 break
             
-            if j > i/2:
+            if j > i//2:
                 primes.append(int(i))
                 break
         
