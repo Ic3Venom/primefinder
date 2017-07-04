@@ -1,5 +1,4 @@
 #This program was a result of my first idea of finding primes 
-import time
 
 def main(): 
     maxRange = int(raw_input("What is the max range of numbers you want tested for being prime? ")) 
@@ -26,12 +25,8 @@ def main():
                 num += 1
                 
         print 'Total primes: %d' % num
+        raw_input()
 
 if __name__ == '__main__':
-    start_time = time.time()
-    print 'Prime2'
     
     main()
-    
-    print("Time taken: %s seconds" % (time.time() - start_time))
-    raw_input()
