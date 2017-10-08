@@ -1,23 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+//#include <sys/time.h>
 
 int main()
 {
     unsigned long long int i, j, max, buffer, count;
     short br, wr;
     FILE *output, *fp;
-
+    //struct timeval start, stop;
 
     fp = fopen("primes.bin", "wb+");
-
-    printf("Finding the primes between 2 and what number? \n");
-
-    max = 100000000;
+    max = 10;
     wr = 0;
     buffer = 2;
-    count = 1;
+    count = 1; //2 is already included
 
+    //gettimeofday(&start, NULL);
     fwrite((const void*)&buffer, sizeof(ULLONG_MAX), 1, fp);
     fseek(fp, 0, SEEK_SET);
 
@@ -45,12 +44,7 @@ int main()
                 break;
             }
 
-            if ((double)buffer > guess)
-            {
-                break;
-            }
-
-            if(feof(fp))
+            if ((double)buffer > guess || feof(fp))
             {
                 break;
             }
@@ -64,7 +58,9 @@ int main()
         }
     }
 
-    printf("total primes from 2 to %llu: %llu", max, count);
+    //gettimeofday(&stop, NULL);
+
+    printf("Total primes from 2 to %llu: %llu", max, count);
 
     if( wr )
     {
@@ -78,6 +74,8 @@ int main()
         }
         fclose(output);
     }
-
+    /*printf("\nTotal time: %f seconds", ((stop.tv_sec - start.tv_sec)
+                                        * 1000.0f + (stop.tv_usec - start.tv_usec)
+                                        / 1000.0f) /1000.0f);*/
     fclose(fp);
 }
